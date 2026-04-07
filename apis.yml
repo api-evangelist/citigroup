@@ -1,7 +1,12 @@
 aid: citigroup
-url: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.citigroup.com
+description: >-
+  Citigroup is a global diversified financial services holding company providing consumers,
+  corporations, governments, and institutions with a broad range of financial products
+  and services.
