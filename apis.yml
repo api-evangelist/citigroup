@@ -186,9 +186,9 @@ common:
   - type: JSON-LD
     url: json-ld/citigroup-context.jsonld
   - type: Spectral
-    url: spectral/citigroup-spectral.yml
+    url: rules/citigroup-rules.yml
   - type: Naftiko Capabilities
-    url: naftiko/citigroup-capabilities.yml
+    url: capabilities/citigroup-capabilities.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

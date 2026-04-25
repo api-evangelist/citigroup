@@ -105,8 +105,8 @@ Corporate treasury and trade integration channel exposing APIs for real-time pay
 - [Terms of Service](https://online.citi.com/US/JRS/pands/detail.do?ID=Terms)
 - [Support](https://online.citi.com/US/contactus.htm)
 - [JSON-LD Context](json-ld/citigroup-context.jsonld)
-- [Spectral Ruleset](spectral/citigroup-spectral.yml)
-- [Naftiko Capabilities](naftiko/citigroup-capabilities.yml)
+- [Spectral Ruleset](rules/citigroup-rules.yml)
+- [Naftiko Capabilities](capabilities/citigroup-capabilities.yml)
 
 ## Maintainers
 
