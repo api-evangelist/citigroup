@@ -1,0 +1,47 @@
+capabilities:
+  - id: citigroup.account-information
+    name: Access account information
+    description: >-
+      Retrieve customer account balances, transactions, and statements
+      from Citi retail accounts with explicit consent.
+    apis:
+      - citigroup:citi-accounts-transactions-api
+      - citigroup:citi-authorize-api
+  - id: citigroup.initiate-payments
+    name: Initiate payments
+    description: >-
+      Move money out of authorized Citi accounts via ACH, wire, and
+      book transfers using OAuth-bound consent.
+    apis:
+      - citigroup:citi-money-movement-api
+      - citigroup:citi-authorize-api
+  - id: citigroup.onboard-customers
+    name: Onboard new customers
+    description: >-
+      Open Citi retail accounts and complete KYC and document collection
+      in a digital flow.
+    apis:
+      - citigroup:citi-onboarding-api
+      - citigroup:citi-customers-api
+  - id: citigroup.redeem-rewards
+    name: Redeem ThankYou points
+    description: >-
+      Pay for purchases at participating merchants and partner
+      applications using Citi cardholder rewards.
+    apis:
+      - citigroup:citi-pay-with-points-api
+  - id: citigroup.lookup-reference-data
+    name: Lookup FX rates and reference data
+    description: >-
+      Retrieve real-time FX rates, branch and ATM locators, and
+      cut-off times for transactional workflows.
+    apis:
+      - citigroup:citi-utilities-api
+  - id: citigroup.connect-treasury
+    name: Connect corporate treasury
+    description: >-
+      Integrate ERP and TMS systems with Citi corporate banking via
+      CitiConnect APIs covering real-time payments, FX, statements,
+      and proof-of-payment.
+    apis:
+      - citigroup:citiconnect-api

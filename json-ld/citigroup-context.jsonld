@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "@vocab": "https://developer.citi.com/vocab/",
+    "schema": "https://schema.org/",
+    "citi": "https://developer.citi.com/vocab/",
+    "Account": "schema:BankAccount",
+    "Transaction": "schema:MoneyTransfer",
+    "Payment": "schema:PaymentService",
+    "Customer": "schema:Person",
+    "Card": "schema:PaymentCard",
+    "Reward": "citi:Reward",
+    "FXRate": "citi:FXRate",
+    "Branch": "schema:BankOrCreditUnion",
+    "Consent": "citi:Consent",
+    "name": "schema:name",
+    "iban": "schema:iban",
+    "bic": "schema:bic",
+    "currency": "schema:currency",
+    "amount": "schema:amount",
+    "balance": "citi:balance",
+    "createdAt": "schema:dateCreated",
+    "valueDate": "citi:valueDate"
+  }
+}

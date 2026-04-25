@@ -1,0 +1,44 @@
+extends:
+  - spectral:oas
+rules:
+  citi-https-only:
+    description: All Citi API servers MUST use HTTPS.
+    severity: error
+    given: $.servers[*].url
+    then:
+      function: pattern
+      functionOptions:
+        match: '^https://'
+  citi-oauth-required:
+    description: Citi APIs MUST declare OAuth 2.0 security schemes.
+    severity: error
+    given: $.components.securitySchemes
+    then:
+      function: truthy
+  citi-operation-id:
+    description: Operations MUST have an operationId.
+    severity: error
+    given: $.paths[*][get,post,put,delete,patch]
+    then:
+      field: operationId
+      function: truthy
+  citi-tag-required:
+    description: Operations MUST be tagged for product domain grouping.
+    severity: warn
+    given: $.paths[*][get,post,put,delete,patch].tags
+    then:
+      function: truthy
+  citi-summary-required:
+    description: Operations MUST have a summary.
+    severity: warn
+    given: $.paths[*][get,post,put,delete,patch]
+    then:
+      field: summary
+      function: truthy
+  citi-info-contact:
+    description: API info MUST contain a contact for security disclosures.
+    severity: warn
+    given: $.info
+    then:
+      field: contact
+      function: truthy
