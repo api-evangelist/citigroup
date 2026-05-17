@@ -175,15 +175,15 @@ common:
     url: https://developer.citi.com/
   - type: Investor Relations
     url: https://www.citigroup.com/global/investors
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://online.citi.com/US/JRS/pands/detail.do?ID=Terms
   - type: Security
     url: https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms
   - type: Support
     url: https://online.citi.com/US/contactus.htm
-  - type: JSON-LD
+  - type: JSONLD
     url: json-ld/citigroup-context.jsonld
   - type: Spectral
     url: rules/citigroup-rules.yml
