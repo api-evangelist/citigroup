@@ -35,7 +35,7 @@ apis:
       - Banking
       - Statements
       - Transactions
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://sandbox.developerhub.citi.com/api/united-states/retail-bank/accounts/accounts-and-transactions/documentation
     properties:
       - url: https://sandbox.developerhub.citi.com/api/united-states/retail-bank/accounts/accounts-and-transactions/documentation
@@ -53,7 +53,7 @@ apis:
       - Payment Initiation
       - Payments
       - Wire Transfer
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://sandbox.developerhub.citi.com/api-catalog-list
     properties:
       - url: https://sandbox.developerhub.citi.com/api-catalog-list
@@ -70,7 +70,7 @@ apis:
       - Consent
       - OAuth
       - SCA
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.citi.com/
     properties:
       - url: https://developer.citi.com/
@@ -86,7 +86,7 @@ apis:
       - Identity
       - KYC
       - Profiles
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.citi.com/
     properties:
       - url: https://developer.citi.com/
@@ -102,7 +102,7 @@ apis:
       - Customer Onboarding
       - KYC
       - Origination
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.citi.com/
     properties:
       - url: https://developer.citi.com/
@@ -117,7 +117,7 @@ apis:
       - Loyalty
       - Pay with Points
       - Rewards
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.citi.com/
     properties:
       - url: https://developer.citi.com/
@@ -133,7 +133,7 @@ apis:
       - Locator
       - Reference Data
       - Utilities
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developer.citi.com/
     properties:
       - url: https://developer.citi.com/
@@ -151,7 +151,7 @@ apis:
       - ERP Integration
       - Treasury
       - TTS
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.citigroup.com/global/insights/citiconnect-api-portal
     properties:
       - url: https://www.citigroup.com/global/insights/citiconnect-api-portal
