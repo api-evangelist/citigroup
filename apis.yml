@@ -192,7 +192,7 @@ common:
     url: json-ld/citigroup-context.jsonld
   - type: Spectral
     url: rules/citigroup-rules.yml
-  - type: Naftiko Capabilities
+  - type: X-NaftikoCapabilities
     url: capabilities/citigroup-capabilities.yml
 maintainers:
   - FN: Kin Lane
