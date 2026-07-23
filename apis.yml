@@ -1,8 +1,22 @@
 aid: citigroup
+kind: company
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/citigroup.png
 name: Citigroup
 url: https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/apis.yml
 created: '2026-03-23'
-modified: '2026-04-23'
+modified: '2026-07-23'
 type: Index
 access: 3rd-Party
 position: Consumer
@@ -10,22 +24,39 @@ specificationVersion: '0.19'
 tags:
   - Banking
   - Financial Services
-  - FX
+  - United States
+  - Money Center Bank
   - Open Banking
+  - Open Finance
+  - Treasury and Trade Solutions
+  - CitiConnect
   - Payments
-  - Treasury
+  - FX
+  - Corporate Banking
   - Fortune 100
 description: >-
-  Citigroup is a global diversified financial services holding company
-  providing consumers, corporations, governments, and institutions with a
-  broad range of financial products and services. Citi exposes its API
-  surface through the Citi Developer Hub, a unified developer portal
-  spanning the bank's retail, commercial, and Treasury and Trade Solutions
-  (TTS) lines of business. Major API domains include CitiConnect for
-  corporate treasury, Accounts and Transactions for retail, Money Movement
-  for payment initiation, Customer Onboarding, Authorization, and
-  utilities for FX rates and reference data. Authentication uses OAuth
-  2.0 with mutual TLS for production endpoints.
+  Citigroup (Citi) is a global, diversified money-center financial services
+  holding company headquartered in New York City, serving consumers,
+  corporations, governments, and institutions across roughly 90 countries.
+  Citi exposes public API access through two distinct, voluntary
+  developer surfaces. The retail Citi Developer Hub (developer.citi.com,
+  now consolidated into the Citi Partner Portal at partner.citi.com) was
+  one of the earliest bank open-banking programs, launched in 2016, and
+  documents seven core API product families: Accounts, Authorize,
+  Customers, Money Movement, Utilities, Onboarding, and Pay with Points,
+  secured with OAuth 2.0 authorization-code and consent flows against a
+  developer sandbox. The corporate surface is CitiConnect, part of Treasury
+  and Trade Solutions (TTS), which has processed more than one billion API
+  calls since 2017 and exposes real-time payments, cross-border WorldLink
+  FX, statements and reporting, request-to-pay, proof-of-payment, and
+  account-balance APIs across the full TTS footprint, integrated through
+  ERP and TMS systems with OAuth 2.0 and mutual TLS. As a US institution
+  Citi participates in voluntary open finance rather than a single mandated
+  contract: it is a co-owner of the Akoya data-access network and shares
+  consumer-permissioned data under emerging FDX / CFPB Section 1033 norms.
+  No public downloadable OpenAPI, Swagger, SDK, or Postman artifacts are
+  published; documentation is HTML and partner-gated, so entries below are
+  documented humanURL references without harvested machine-readable specs.
 apis:
   - aid: citigroup:citi-accounts-transactions-api
     name: Citi Accounts and Transactions API
@@ -35,16 +66,25 @@ apis:
       - Banking
       - Statements
       - Transactions
+      - United States
+      - Retail Banking
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://sandbox.developerhub.citi.com/api/united-states/retail-bank/accounts/accounts-and-transactions/documentation
+    humanURL: https://partner.citi.com/products/open-banking
     properties:
-      - url: https://sandbox.developerhub.citi.com/api/united-states/retail-bank/accounts/accounts-and-transactions/documentation
+      - url: https://partner.citi.com/products/open-banking
         type: Documentation
+      - url: https://sandbox.developerhub.citi.com/api/united-states/retail-bank/accounts/accounts-and-transactions/documentation
+        type: SandboxDocumentation
     description: >-
-      The Citi Accounts and Transactions API provides authorized access
-      to retail customer accounts, balances, and transaction histories.
-      Authentication uses OAuth 2.0 access tokens issued through the Citi
-      Developer Hub authorization flow.
+      The Citi Accounts and Transactions API provides authorized third-party
+      access to retail customer accounts, current and available balances, and
+      transaction histories, enabling account-aggregation and personal
+      financial management use cases. It is part of the Citi Developer Hub
+      retail open-banking catalog. Access is granted per-customer after an
+      OAuth 2.0 authorization-code consent flow, with production traffic
+      brokered through the Citi sandbox and partner onboarding process. No
+      public OpenAPI or Postman collection is published; documentation is
+      HTML-only on the Citi Partner Portal.
   - aid: citigroup:citi-money-movement-api
     name: Citi Money Movement API
     tags:
@@ -53,16 +93,24 @@ apis:
       - Payment Initiation
       - Payments
       - Wire Transfer
+      - United States
+      - Retail Banking
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://sandbox.developerhub.citi.com/api-catalog-list
+    humanURL: https://partner.citi.com/products/open-banking
     properties:
-      - url: https://sandbox.developerhub.citi.com/api-catalog-list
+      - url: https://partner.citi.com/products/open-banking
         type: Documentation
+      - url: https://sandbox.developerhub.citi.com/api-catalog-list
+        type: APICatalog
     description: >-
-      The Citi Money Movement API enables authorized payment initiation
-      from Citi accounts including domestic ACH, wire, and book transfers.
-      Authentication uses OAuth 2.0 with strong customer authentication
-      flows.
+      The Citi Money Movement API enables authorized payment initiation from
+      Citi retail accounts, including domestic ACH, wire, and internal book
+      transfers, on behalf of a consenting customer. It is one of the seven
+      core products in the Citi Developer Hub retail catalog. Authentication
+      uses OAuth 2.0 with strong-customer-authentication consent flows, and
+      production access requires partner onboarding. Documentation is
+      HTML-only; no downloadable OpenAPI, SDK, or Postman collection is
+      publicly available.
   - aid: citigroup:citi-authorize-api
     name: Citi Authorize API
     tags:
@@ -70,15 +118,24 @@ apis:
       - Consent
       - OAuth
       - SCA
+      - Identity
+      - United States
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.citi.com/
+    humanURL: https://partner.citi.com/developers
     properties:
-      - url: https://developer.citi.com/
+      - url: https://partner.citi.com/developers
         type: Documentation
+      - url: https://developer.citi.com/
+        type: DeveloperPortal
     description: >-
-      The Citi Authorize API handles the OAuth 2.0 authorization-code
-      and consent flows required for third-party applications to access
-      a customer's Citi account data and initiate payments.
+      The Citi Authorize API handles the OAuth 2.0 authorization-code and
+      customer-consent flows required for third-party applications to gain
+      scoped access to a customer's Citi account data and to initiate
+      payments. It is the security and consent layer underpinning the rest
+      of the Citi Developer Hub retail catalog, issuing the access and
+      refresh tokens consumed by the Accounts, Money Movement, and Customers
+      APIs. Documentation is HTML-only on the Citi developer surface; no
+      public OpenAPI is published.
   - aid: citigroup:citi-customers-api
     name: Citi Customers API
     tags:
@@ -86,15 +143,21 @@ apis:
       - Identity
       - KYC
       - Profiles
+      - United States
+      - Retail Banking
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.citi.com/
+    humanURL: https://partner.citi.com/products/open-banking
     properties:
-      - url: https://developer.citi.com/
+      - url: https://partner.citi.com/products/open-banking
         type: Documentation
     description: >-
-      The Citi Customers API provides authorized access to customer
-      profile information including contact details and demographic
-      data for use in onboarding and KYC workflows.
+      The Citi Customers API provides authorized access to retail customer
+      profile information, including contact details and demographic data,
+      for use in onboarding, personalization, and Know-Your-Customer (KYC)
+      workflows. It is part of the Citi Developer Hub retail open-banking
+      catalog and is gated behind OAuth 2.0 customer consent. Documentation
+      is HTML-only on the Citi Partner Portal; no machine-readable spec is
+      published.
   - aid: citigroup:citi-onboarding-api
     name: Citi Onboarding API
     tags:
@@ -102,30 +165,42 @@ apis:
       - Customer Onboarding
       - KYC
       - Origination
+      - United States
+      - Retail Banking
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.citi.com/
+    humanURL: https://partner.citi.com/products/open-banking
     properties:
-      - url: https://developer.citi.com/
+      - url: https://partner.citi.com/products/open-banking
         type: Documentation
     description: >-
       The Citi Onboarding API enables digital account opening, document
-      submission, and KYC workflows for onboarding new retail customers
-      to Citi products.
+      submission, and KYC-driven origination workflows for onboarding new
+      retail customers onto Citi products. It is one of the seven core
+      products in the Citi Developer Hub retail catalog. Access uses OAuth
+      2.0 and requires partner onboarding for production use. Documentation
+      is HTML-only; no downloadable OpenAPI or SDK is publicly available.
   - aid: citigroup:citi-pay-with-points-api
     name: Citi Pay with Points API
     tags:
       - Loyalty
       - Pay with Points
       - Rewards
+      - ThankYou Points
+      - United States
+      - Cards
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.citi.com/
+    humanURL: https://partner.citi.com/products/open-banking
     properties:
-      - url: https://developer.citi.com/
+      - url: https://partner.citi.com/products/open-banking
         type: Documentation
     description: >-
       The Citi Pay with Points API enables Citi cardholders to redeem
-      ThankYou points and other rewards for purchases at merchant
-      checkouts and inside partner applications.
+      ThankYou points and other rewards balances for purchases at merchant
+      checkouts and inside partner applications. It is part of the Citi
+      Developer Hub retail catalog and is one of the earliest bank rewards
+      APIs, powering embedded points-redemption partnerships. Access uses
+      OAuth 2.0 customer consent; documentation is HTML-only with no public
+      OpenAPI or Postman collection.
   - aid: citigroup:citi-utilities-api
     name: Citi Utilities API
     tags:
@@ -133,69 +208,160 @@ apis:
       - Locator
       - Reference Data
       - Utilities
+      - United States
+      - Retail Banking
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://developer.citi.com/
+    humanURL: https://partner.citi.com/products/open-banking
     properties:
-      - url: https://developer.citi.com/
+      - url: https://partner.citi.com/products/open-banking
         type: Documentation
     description: >-
-      The Citi Utilities API provides reference data such as FX rates,
-      branch and ATM locators, and cut-off times used to support
-      transactional workflows across Citi's retail and commercial
-      offerings.
+      The Citi Utilities API provides supporting reference data such as
+      foreign-exchange rates, branch and ATM locators, and cut-off times used
+      to support transactional workflows across Citi's retail and commercial
+      offerings. It rounds out the seven-product Citi Developer Hub retail
+      catalog as the shared infrastructure and reference layer. Documentation
+      is HTML-only; no public machine-readable specification is published.
   - aid: citigroup:citiconnect-api
     name: CitiConnect API
     tags:
       - CitiConnect
       - Corporate Banking
       - ERP Integration
-      - Treasury
+      - Treasury and Trade Solutions
       - TTS
+      - Real-Time Payments
+      - United States
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://www.citigroup.com/global/insights/citiconnect-api-portal
+    properties:
+      - url: https://www.citigroup.com/global/insights/citiconnect-api-portal
+        type: Documentation
+      - url: https://www.citigroup.com/global/businesses/services/treasury-and-trade-solutions
+        type: ProductPage
+    description: >-
+      CitiConnect is the corporate treasury and trade integration channel
+      within Citi's Treasury and Trade Solutions (TTS) business, exposing
+      APIs for real-time payment initiation, payment status reporting,
+      request-to-pay, direct debits, faster payments, and account-balance
+      inquiry for enterprise clients connecting through ERP and TMS systems.
+      Launched in late 2017, CitiConnect APIs span the full TTS footprint of
+      90-plus countries and have processed more than one billion API calls.
+      Authentication uses OAuth 2.0 with mutual TLS. It offers complete API
+      documentation and a functional sandbox to onboarded corporate clients;
+      no public downloadable OpenAPI is available.
+  - aid: citigroup:citiconnect-worldlink-api
+    name: CitiConnect WorldLink Payment Services API
+    tags:
+      - WorldLink
+      - Cross-Border Payments
+      - FX
+      - CitiConnect
+      - Treasury and Trade Solutions
+      - TTS
+      - United States
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.citigroup.com/global/insights/citiconnect-api-portal
     properties:
       - url: https://www.citigroup.com/global/insights/citiconnect-api-portal
         type: Documentation
     description: >-
-      CitiConnect is the corporate treasury and trade integration
-      channel that exposes APIs for real-time payments, FX, statements,
-      direct debits, faster payments, and proof-of-payment for
-      enterprise clients connecting through ERP and TMS systems.
+      The CitiConnect WorldLink Payment Services API delivers cross-border,
+      multi-currency payment capabilities within the CitiConnect suite,
+      including FX rate enquiry, FX deal booking, and cross-border payment
+      initiation with 24x7 availability. WorldLink lets corporate and
+      institutional clients send payments in a wide range of currencies
+      without maintaining local currency accounts. It is part of Citi's
+      Treasury and Trade Solutions API portfolio, secured with OAuth 2.0 and
+      mutual TLS, and documented in the CitiConnect developer sandbox.
+      Documentation is partner-gated; no public OpenAPI is published.
+  - aid: citigroup:citiconnect-fx-api
+    name: CitiConnect FX (Real-Time FX) API
+    tags:
+      - FX
+      - Foreign Exchange
+      - CitiConnect
+      - Treasury and Trade Solutions
+      - TTS
+      - Real-Time FX
+      - United States
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://www.citigroup.com/global/insights/citiconnect-api-portal
+    properties:
+      - url: https://www.citigroup.com/global/insights/citiconnect-api-portal
+        type: Documentation
+    description: >-
+      The CitiConnect FX API provides real-time foreign-exchange information
+      and execution for corporate treasury clients, supporting FX rate
+      requests and the booking of FX contracts directly from ERP and TMS
+      systems. It is one of the most-used CitiConnect data services, enabling
+      treasurers to embed live rates and deal booking into automated
+      workflows across the TTS footprint. Access uses OAuth 2.0 with mutual
+      TLS; documentation and sandbox are provided to onboarded corporate
+      clients, with no public downloadable specification.
+  - aid: citigroup:citiconnect-statements-reporting-api
+    name: CitiConnect Statements and Reporting API
+    tags:
+      - Statements
+      - Reporting
+      - Proof of Payment
+      - CitiConnect
+      - Treasury and Trade Solutions
+      - TTS
+      - United States
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+    humanURL: https://www.citigroup.com/global/insights/citiconnect-api-portal
+    properties:
+      - url: https://www.citigroup.com/global/insights/citiconnect-api-portal
+        type: Documentation
+    description: >-
+      The CitiConnect Statements and Reporting API delivers self-service
+      reports, account statements, intraday and prior-day balance and
+      transaction reporting, cut-off times, and proof-of-payment confirmation
+      for corporate treasury clients. It is part of the CitiConnect data
+      services within Citi's Treasury and Trade Solutions business, letting
+      enterprises pull reconciliation and reporting data programmatically
+      into ERP and TMS systems. Authentication uses OAuth 2.0 with mutual
+      TLS; documentation is partner-gated with no public OpenAPI available.
 common:
-  - type: DomainSecurity
-    url: security/citigroup-domain-security.yml
+  - type: Website
+    url: https://www.citigroup.com
+  - type: DeveloperPortal
+    url: https://developer.citi.com/
+  - type: PartnerPortal
+    url: https://partner.citi.com/
+  - type: Documentation
+    url: https://partner.citi.com/developers
+  - type: APICatalog
+    url: https://sandbox.developerhub.citi.com/api-catalog-list
+  - type: CitiConnect
+    url: https://www.citigroup.com/global/insights/citiconnect-api-portal
   - type: GitHubOrganization
     url: https://github.com/citi
   - type: LinkedIn
     url: https://www.linkedin.com/company/citigroup
-  - type: Website
-    url: https://www.citigroup.com
-  - type: Portal
-    url: https://developer.citi.com/
-  - type: Sandbox
-    url: https://sandbox.developerhub.citi.com/
-  - type: API Catalog
-    url: https://sandbox.developerhub.citi.com/api-catalog-list
-  - type: CitiConnect
-    url: https://www.citigroup.com/global/insights/citiconnect-api-portal
-  - type: Documentation
-    url: https://developer.citi.com/
-  - type: Investor Relations
+  - type: Blog
+    url: https://www.citigroup.com/global/news
+  - type: InvestorRelations
     url: https://www.citigroup.com/global/investors
-  - type: PrivacyPolicy
-    url: https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms
   - type: TermsOfService
     url: https://online.citi.com/US/JRS/pands/detail.do?ID=Terms
-  - type: Security
+  - type: PrivacyPolicy
     url: https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms
   - type: Support
     url: https://online.citi.com/US/contactus.htm
+  - type: DomainSecurity
+    url: security/citigroup-domain-security.yml
+  - type: Plans
+    url: plans/citigroup-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/citigroup-rate-limits.yml
+  - type: FinOps
+    url: finops/citigroup-finops.yml
   - type: JSONLD
     url: json-ld/citigroup-context.jsonld
   - type: Spectral
     url: rules/citigroup-rules.yml
-  - type: X-NaftikoCapabilities
-    url: capabilities/citigroup-capabilities.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -1,0 +1,92 @@
+reviewer: API Evangelist
+date: '2026-07-23'
+slug: citigroup
+institution: Citigroup (Citi)
+tier: money-center
+primary_domain: citi.com
+summary: >-
+  Citi runs two distinct, genuinely public API programs. The retail Citi
+  Developer Hub (developer.citi.com, launched 2016) is now consolidated into
+  the Citi Partner Portal (partner.citi.com) and documents seven core
+  open-banking product families. The corporate CitiConnect program, part of
+  Treasury and Trade Solutions (TTS), is a mature enterprise API suite that
+  has processed 1B+ calls since 2017. Neither surface publishes downloadable
+  machine-readable specs; documentation is HTML and partner-gated, so this
+  repo carries documented humanURL references only, no harvested OpenAPI.
+developer_portal:
+  url: https://developer.citi.com/
+  consolidated_into: https://partner.citi.com/
+  status: live (HTTP 200)
+  notes: >-
+    developer.citi.com is the originally announced global API Developer Hub.
+    The former sandbox host sandbox.developerhub.citi.com now issues a 301
+    redirect to partner.citi.com, where retail open-banking products live at
+    /products/open-banking and developer resources at /developers.
+retail_api_products:
+  - Accounts and Transactions
+  - Authorize (OAuth 2.0 / consent)
+  - Customers
+  - Money Movement (ACH / wire / book transfer)
+  - Onboarding
+  - Pay with Points (ThankYou rewards)
+  - Utilities (FX rates, locators, reference data)
+corporate_api_products:
+  program: CitiConnect (Treasury and Trade Solutions)
+  products:
+  - CitiConnect API (real-time payments, request-to-pay, direct debit, balances)
+  - CitiConnect WorldLink (cross-border multi-currency FX payments, 24x7)
+  - CitiConnect FX (real-time FX rate enquiry and deal booking)
+  - CitiConnect Statements and Reporting (statements, reporting, proof of payment)
+  scale: 90+ country TTS footprint; 1B+ API calls processed since late 2017
+auth_model:
+  retail: OAuth 2.0 authorization-code and customer-consent flows (sandbox-brokered)
+  corporate: OAuth 2.0 with mutual TLS (mTLS) for CitiConnect production endpoints
+downloadable_specs:
+  openapi: false
+  swagger: false
+  postman: false
+  sdk: false
+  notes: >-
+    No public OpenAPI, Swagger, Postman collection, or SDK is published on
+    either the retail or CitiConnect surface. OpenBankingTracker confirms
+    "No SDKs" and "No Postman collections" for Citi. Full API documentation
+    and a functional sandbox exist but sit behind developer/partner
+    registration, so nothing machine-readable could be harvested verbatim.
+open_finance_posture:
+  regime: US voluntary open finance (no single mandated contract)
+  fdx: >-
+    Aligned with Financial Data Exchange (FDX) standards, the CFPB-recognized
+    Section 1033 standard-setting body, via the Akoya data-access network.
+  akoya: >-
+    Citi is a co-owner of Akoya, the API-based consumer-permissioned
+    data-access network (jointly owned by Fidelity, The Clearing House, and
+    member banks including Citi, JPMorgan, Bank of America, and Capital One).
+  cfpb_1033: >-
+    Subject to CFPB Section 1033 Personal Financial Data Rights; consumer
+    data-access is expected to flow through FDX-standard APIs brokered by
+    Akoya rather than a bespoke public 1033 endpoint.
+  aggregator_access: Akoya (primary); consumer-permissioned aggregation broadly.
+spec_provenance:
+  method: documented-humanURL-only
+  harvested_openapi_count: 0
+  sources:
+  - https://partner.citi.com/products/open-banking
+  - https://partner.citi.com/developers
+  - https://developer.citi.com/
+  - https://www.citigroup.com/global/insights/citiconnect-api-portal
+  - https://www.openbankingtracker.com/provider/citi/apis
+  - https://www.citigroup.com/global/news/press-release/2016/citi-launches-global-api-developer-hub-to-enable-open-banking
+verified_links:
+  website: https://www.citigroup.com (200)
+  developer_portal: https://developer.citi.com/ (200)
+  partner_portal: https://partner.citi.com/ (200)
+  github_org: https://github.com/citi (200, 41 public repos)
+  linkedin: https://www.linkedin.com/company/citigroup (200)
+  citiconnect: https://www.citigroup.com/global/insights/citiconnect-api-portal (200)
+  api_catalog: https://sandbox.developerhub.citi.com/api-catalog-list (200, redirects to partner.citi.com)
+findings:
+  - Real, mature two-surface public API program; among the earliest bank open-banking efforts (2016).
+  - Retail catalog of seven documented product families plus a four-product CitiConnect corporate suite.
+  - No machine-readable artifacts (OpenAPI/Postman/SDK) are publicly downloadable; documentation is HTML/partner-gated.
+  - Open-finance data access is intermediated through Akoya (co-owned) under FDX / CFPB 1033 norms rather than a bespoke public endpoint.
+  - Removed a broken X-NaftikoCapabilities pointer (no capabilities/ directory present); added verified Plans, RateLimits, FinOps, and Blog pointers.
