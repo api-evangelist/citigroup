@@ -1,0 +1,40 @@
+# Citigroup (Citi)
+
+> Citi is a global money-center financial-services holding company serving consumers, corporations, governments, and institutions across roughly 90 countries. It exposes public API access through two voluntary developer surfaces: the retail Citi Developer Hub (partner.citi.com / developer.citi.com), one of the earliest bank open-banking programs (launched 2016), and the corporate CitiConnect channel within Treasury and Trade Solutions (launched 2017, 1B+ API calls). No public downloadable OpenAPI, SDK, or Postman artifacts are published; documentation is HTML and partner-gated. Authentication is OAuth 2.0 with customer consent (retail) and OAuth 2.0 + mutual TLS (corporate).
+
+## Developer surfaces
+- [Citi Developer Portal](https://developer.citi.com/): Retail Citi Developer Hub landing.
+- [Citi Partner Portal](https://partner.citi.com/): Consolidated retail open-banking developer documentation.
+- [Citi Partner Developers](https://partner.citi.com/developers): API documentation and onboarding.
+- [Open Banking Products](https://partner.citi.com/products/open-banking): Retail open-banking product catalog.
+- [CitiConnect API Portal](https://www.citigroup.com/global/insights/citiconnect-api-portal): Corporate treasury and trade API channel.
+- [Treasury and Trade Solutions](https://www.citigroup.com/global/businesses/services/treasury-and-trade-solutions): TTS business overview.
+- [Sandbox API Catalog](https://sandbox.developerhub.citi.com/api-catalog-list): Developer sandbox catalog (JS-rendered).
+
+## Retail APIs (Citi Developer Hub)
+- Citi Accounts and Transactions API: Authorized access to retail accounts, balances, and transaction history.
+- Citi Authorize API: OAuth 2.0 authorization-code and customer-consent (SCA) flows underpinning the retail catalog.
+- Citi Customers API: Authorized access to retail customer profile information for onboarding/KYC.
+- Citi Money Movement API: Payment initiation (ACH, wire, internal transfers) on behalf of a consenting customer.
+- Citi Onboarding API: Digital account opening, document submission, and KYC-driven origination.
+- Citi Pay with Points API: ThankYou points / rewards redemption at merchant checkouts and in partner apps.
+- Citi Utilities API: Reference data — FX rates, branch/ATM locators, cut-off times.
+
+## Corporate APIs (CitiConnect / Treasury and Trade Solutions)
+- CitiConnect API: Real-time payment initiation, status reporting, request-to-pay, direct debits, account-balance inquiry for ERP/TMS integration.
+- CitiConnect WorldLink Payment Services API: Cross-border, multi-currency payments with FX rate enquiry and deal booking (24x7).
+- CitiConnect FX (Real-Time FX) API: Real-time FX rates and contract booking from ERP/TMS systems.
+- CitiConnect Statements and Reporting API: Self-service reports, statements, intraday/prior-day balance and transaction reporting, proof-of-payment.
+
+## Company
+- [Citi Website](https://www.citigroup.com): Corporate site.
+- [News / Blog](https://www.citigroup.com/global/news): Citi news and insights.
+- [Investor Relations](https://www.citigroup.com/global/investors): Investor materials.
+- [Citi on GitHub](https://github.com/citi): Citi open-source program office (tooling and FINOS contributions; not banking-API SDKs).
+- [Terms of Service](https://online.citi.com/US/JRS/pands/detail.do?ID=Terms)
+- [Privacy Policy](https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms)
+
+## Notes
+- Authentication: OAuth 2.0 authorization-code + consent (retail); OAuth 2.0 + mutual TLS (CitiConnect).
+- Open finance: Citi is a co-owner of the Akoya data-access network; consumer-permissioned data aligned to FDX / CFPB Section 1033.
+- No public OpenAPI, SDK, CLI, or Postman collection is published; production access requires partner onboarding.

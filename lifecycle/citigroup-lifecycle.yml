@@ -1,0 +1,42 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  Citi Developer Hub / CitiConnect public documentation and Citi press. No
+  public OpenAPI is published; lifecycle facts are transcribed from Citi's
+  documented program history rather than derived from a spec.
+docs:
+  - https://partner.citi.com/developers
+  - https://www.citigroup.com/global/insights/citiconnect-api-portal
+programs:
+  - name: Citi Developer Hub (retail open banking)
+    launched: '2016'
+    note: >-
+      One of the earliest bank open-banking programs; seven core product
+      families (Accounts, Authorize, Customers, Money Movement, Utilities,
+      Onboarding, Pay with Points). Now consolidated into the Citi Partner
+      Portal (partner.citi.com).
+  - name: CitiConnect (Treasury and Trade Solutions)
+    launched: '2017'
+    note: >-
+      Corporate treasury/trade API channel; has processed more than one billion
+      API calls across the full TTS footprint of 90+ countries.
+versioning:
+  scheme: uri-path
+  note: >-
+    Citi versions its APIs within the developer sandbox catalog; exact version
+    identifiers are partner-gated and not published in self-serve form.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    No public deprecation / Sunset (RFC 8594) policy is published; deprecation
+    and migration timelines are communicated to onboarded partners directly.
+sla:
+  url: null
+  uptime_target: null
+  note: SLAs are negotiated inside the partner agreement, not published publicly.
+status_page: null
+status_page_note: >-
+  No public status page is published for the Citi Developer Hub or CitiConnect
+  APIs; incident communication is partner-channel.
+deprecated_operations: []

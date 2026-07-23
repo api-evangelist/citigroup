@@ -362,6 +362,16 @@ common:
     url: json-ld/citigroup-context.jsonld
   - type: Spectral
     url: rules/citigroup-rules.yml
+  - type: Authentication
+    url: authentication/citigroup-authentication.yml
+  - type: Conformance
+    url: conformance/citigroup-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/citigroup-lifecycle.yml
+  - type: Conventions
+    url: conventions/citigroup-conventions.yml
+  - type: LLMsTxt
+    url: llms/citigroup-llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

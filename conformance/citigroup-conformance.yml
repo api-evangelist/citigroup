@@ -1,0 +1,44 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  Citi Developer Hub / CitiConnect documentation and public Citi open-finance
+  posture (Akoya co-ownership, FDX / CFPB Section 1033 alignment). No public
+  OpenAPI is published; conformance is asserted from documented behavior, not
+  derived from a spec.
+docs:
+  - https://partner.citi.com/developers
+  - https://www.citigroup.com/global/insights/citiconnect-api-portal
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      OAuth 2.0 authorization-code + consent documented for the retail Citi
+      Developer Hub; OAuth 2.0 documented for CitiConnect corporate access.
+  - id: mutual-tls
+    conforms: true
+    evidence: CitiConnect requires mutual TLS (client certificate) alongside OAuth 2.0.
+  - id: oidc
+    conforms: false
+    evidence: No OpenID Connect discovery document published; consent is Citi-proprietary.
+  - id: fapi
+    conforms: unknown
+    evidence: >-
+      Citi operates a bank-grade consent + SCA flow but does not publicly claim
+      Financial-grade API (FAPI) certification.
+  - id: fdx
+    conforms: partial
+    evidence: >-
+      Citi is a co-owner of the Akoya data-access network and shares
+      consumer-permissioned data under emerging FDX / CFPB Section 1033 norms
+      (US open finance is voluntary, not a single mandated contract).
+  - id: psd2
+    conforms: false
+    evidence: US institution; PSD2 is an EU regime and does not apply to Citi US APIs.
+  - id: cfpb-1033
+    conforms: partial
+    evidence: >-
+      Citi participates in US open-finance data sharing aligned to CFPB Section
+      1033 consumer-permissioned data-access norms via Akoya.
+  - id: rfc9457-problem-details
+    conforms: unknown
+    evidence: Error envelope not published in machine-readable form.

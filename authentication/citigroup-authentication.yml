@@ -1,0 +1,60 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  Citi Developer Hub / Citi Partner Portal and CitiConnect API documentation
+  (partner.citi.com/developers, developer.citi.com, citigroup.com CitiConnect
+  API portal). No public OpenAPI is published, so securitySchemes are
+  transcribed from Citi's published HTML documentation rather than derived
+  from a machine-readable spec.
+docs:
+  - https://partner.citi.com/developers
+  - https://www.citigroup.com/global/insights/citiconnect-api-portal
+summary:
+  types:
+    - oauth2
+    - mutualTLS
+  api_key_in: []
+  oauth2_flows:
+    - authorizationCode
+    - clientCredentials
+  notes: >-
+    Two distinct authentication surfaces. The retail Citi Developer Hub uses
+    OAuth 2.0 authorization-code with an explicit customer consent (strong
+    customer authentication) step to authorize third-party access to a
+    consenting customer's account data and payment initiation. The corporate
+    CitiConnect (Treasury and Trade Solutions) channel uses OAuth 2.0 together
+    with mutual TLS (client-certificate) for enterprise ERP/TMS connectivity.
+schemes:
+  - name: CitiOAuth2AuthorizationCode
+    type: oauth2
+    surface: Citi Developer Hub (retail open banking)
+    flows:
+      - flow: authorizationCode
+        note: >-
+          Third-party application redirects the customer to Citi to
+          authenticate and grant consent; Citi returns an authorization code
+          exchanged for access and refresh tokens. Consent is scoped per
+          product family (Accounts, Money Movement, Customers, etc.).
+    consent: true
+    sca: true
+    sources:
+      - apis.yml (citi-authorize-api, citi-accounts-transactions-api)
+  - name: CitiConnectOAuth2
+    type: oauth2
+    surface: CitiConnect (corporate Treasury and Trade Solutions)
+    flows:
+      - flow: clientCredentials
+        note: >-
+          Machine-to-machine access for onboarded corporate clients; documented
+          as OAuth 2.0 in the CitiConnect API portal.
+    sources:
+      - apis.yml (citiconnect-api, citiconnect-worldlink-api, citiconnect-fx-api)
+  - name: CitiConnectMutualTLS
+    type: mutualTLS
+    surface: CitiConnect (corporate Treasury and Trade Solutions)
+    note: >-
+      Client-certificate (mutual TLS) is required in addition to OAuth 2.0 for
+      CitiConnect enterprise connectivity, per Citi's published CitiConnect
+      documentation.
+    sources:
+      - apis.yml (citiconnect-api)

@@ -1,0 +1,50 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  Citi Developer Hub / CitiConnect public documentation. No public OpenAPI is
+  published; cross-cutting conventions are transcribed from Citi's documented
+  behavior, and fields Citi does not publish self-serve are marked unknown
+  rather than assumed.
+docs:
+  - https://partner.citi.com/developers
+  - https://www.citigroup.com/global/insights/citiconnect-api-portal
+authentication:
+  style: >-
+    OAuth 2.0 authorization-code + customer consent (retail Citi Developer Hub);
+    OAuth 2.0 + mutual TLS (corporate CitiConnect). See
+    authentication/citigroup-authentication.yml.
+  ref: authentication/citigroup-authentication.yml
+transport:
+  tls: required
+  mutual_tls: required for CitiConnect corporate connectivity
+idempotency:
+  supported: unknown
+  note: >-
+    Citi does not publish an idempotency-key contract in self-serve
+    documentation. Payment-initiation retries on CitiConnect are governed by the
+    partner integration agreement; no public Idempotency-Key header is
+    documented, so no idempotency pointer is asserted.
+pagination:
+  style: unknown
+  note: Not published in self-serve documentation.
+versioning:
+  style: uri-path
+  ref: lifecycle/citigroup-lifecycle.yml
+error_envelope:
+  style: unknown
+  note: >-
+    Error response shape is documented HTML-only inside the partner-gated
+    developer hub; no machine-readable error catalog is published.
+rate_limit_signaling:
+  responses:
+    throttled: 429
+    service_unavailable: 503
+  note: >-
+    Clients should honor Retry-After and apply exponential backoff with jitter.
+    See rate-limits/citigroup-rate-limits.yml.
+  ref: rate-limits/citigroup-rate-limits.yml
+consent:
+  model: >-
+    Explicit per-customer consent with strong customer authentication (SCA) for
+    retail data access and payment initiation; consent scoped per product
+    family.
