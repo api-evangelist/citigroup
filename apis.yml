@@ -34,6 +34,19 @@ position: Consumer
 specificationVersion: '0.23'
 tags:
   - Banking
+  - Financial-Services
+  - United States
+  - Money Center Bank
+  - Open Banking
+  - Open Finance
+  - Treasury and Trade Solutions
+  - CitiConnect
+  - Payments
+  - FX
+  - Corporate Banking
+  - Fortune 100
+tags_raw:
+  - Banking
   - Financial Services
   - United States
   - Money Center Bank
@@ -72,6 +85,14 @@ apis:
   - aid: citigroup:citi-accounts-transactions-api
     name: Citi Accounts and Transactions API
     tags:
+      - Account
+      - Balances
+      - Banking
+      - Statements
+      - Transaction
+      - United States
+      - Retail Banking
+    tags_raw:
       - Accounts
       - Balances
       - Banking
@@ -125,6 +146,13 @@ apis:
   - aid: citigroup:citi-authorize-api
     name: Citi Authorize API
     tags:
+      - Authorization
+      - Consent
+      - Authentication
+      - SCA
+      - Identity
+      - United States
+    tags_raw:
       - Authorization
       - Consent
       - OAuth
