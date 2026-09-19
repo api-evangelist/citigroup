@@ -124,6 +124,14 @@ apis:
       - Money Movement
       - Payment Initiation
       - Payments
+      - Wire Transfers
+      - United States
+      - Retail Banking
+    tags_raw:
+      - ACH
+      - Money Movement
+      - Payment Initiation
+      - Payments
       - Wire Transfer
       - United States
       - Retail Banking
