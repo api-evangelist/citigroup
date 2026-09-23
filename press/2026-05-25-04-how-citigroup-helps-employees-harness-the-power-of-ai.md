@@ -1,7 +1,9 @@
 ---
 title: How Citigroup Helps Employees Harness the Power of AI
 url: https://aimagazine.com/news/jane-fraser-on-how-citi-is-harnessing-ai
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Citigroup" press release artificial intelligence'
 position: 4
 source: serpapi-google

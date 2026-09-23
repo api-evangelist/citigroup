@@ -1,7 +1,9 @@
 ---
 title: Introducing AI Agents
 url: https://www.citigroup.com/global/news/perspectives/2026/introducing-ai-agents-next-phase-citi-artificial-intelligence-journey
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Citigroup" press release artificial intelligence'
 position: 1
 source: serpapi-google
