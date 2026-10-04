@@ -34,7 +34,7 @@ position: Consuming
 specificationVersion: '0.23'
 tags:
   - Banking
-  - Financial-Services
+  - Financial Services
   - United States
   - Money Center Bank
   - Open Banking
@@ -58,6 +58,7 @@ tags_raw:
   - FX
   - Corporate Banking
   - Fortune 100
+  - Financial-Services
 description: >-
   Citigroup (Citi) is a global, diversified money-center financial services
   holding company headquartered in New York City, serving consumers,
