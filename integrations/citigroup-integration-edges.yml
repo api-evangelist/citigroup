@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/citigroup/integrations
+- https://n8n.io/integrations/citigroup/
+- https://composio.dev/toolkits/citigroup
+- https://monid.ai/tools/citigroup
+checked:
+- https://composio.dev/toolkits/citigroup
+- https://monid.ai/tools/citigroup
+- https://n8n.io/integrations/citigroup/
+- https://zapier.com/apps/citigroup/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
