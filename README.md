@@ -1,4 +1,4 @@
-# Citigroup (citigroup)
+# Citigroup
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,69 +64,130 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Citigroup (Citi) is a global, diversified money-center financial services holding company headquartered in New York City, serving consumers, corporations, governments, and institutions across roughly 90 countries. Citi exposes public API access through two distinct, voluntary developer surfaces: the retail **Citi Developer Hub** (developer.citi.com, launched 2016, now consolidated into the **Citi Partner Portal** at partner.citi.com) and the corporate **CitiConnect** program within Treasury and Trade Solutions (TTS).
+Citigroup (Citi) is a global, diversified money-center financial services holding company headquartered in New York City, serving consumers, corporations, governments, and institutions across roughly 90 countries. Citi exposes public API access through two distinct, voluntary developer surfaces. The retail Citi Developer Hub (developer.citi.com, now consolidated into the Citi Partner Portal at partner.citi.com) was one of the earliest bank open-banking programs, launched in 2016, and documents seven core API product families: Accounts, Authorize, Customers, Money Movement, Utilities, Onboarding, and Pay with Points, secured with OAuth 2.0 authorization-code and consent flows against a developer sandbox. The corporate surface is CitiConnect, part of Treasury and Trade Solutions (TTS), which has processed more than one billion API calls since 2017 and exposes real-time payments, cross-border WorldLink FX, statements and reporting, request-to-pay, proof-of-payment, and account-balance APIs across the full TTS footprint, integrated through ERP and TMS systems with OAuth 2.0 and mutual TLS. As a US institution Citi participates in voluntary open finance rather than a single mandated contract: it is a co-owner of the Akoya data-access network and shares consumer-permissioned data under emerging FDX / CFPB Section 1033 norms. No public downloadable OpenAPI, Swagger, SDK, or Postman artifacts are published; documentation is HTML and partner-gated, so entries below are documented humanURL references without harvested machine-readable specs.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/citigroup/refs/heads/main/apis.yml)
+**Areas:** Banking · Financial Services · United States · Money Center Bank · Open Banking · Open Finance · Treasury and Trade Solutions · CitiConnect · Payments · Foreign Exchange · Corporate Banking · Fortune 100
 
-## Scope
+## Citigroup on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Citigroup is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/citigroup/](https://apis.io/providers/citigroup/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (11)
 
- - Banking, Financial Services, United States, Money Center Bank, Open Banking, Open Finance, Treasury and Trade Solutions, CitiConnect, Payments, FX, Corporate Banking, Fortune 100
+- [Citi Accounts and Transactions API](https://apis.io/apis/citigroup/citi-accounts-transactions-api/) — The Citi Accounts and Transactions API provides authorized third-party access to retail customer accounts, current and available balances, and transaction…
+- [Citi Money Movement API](https://apis.io/apis/citigroup/citi-money-movement-api/) — The Citi Money Movement API enables authorized payment initiation from Citi retail accounts, including domestic ACH, wire, and internal book transfers, on…
+- [Citi Authorize API](https://apis.io/apis/citigroup/citi-authorize-api/) — The Citi Authorize API handles the OAuth 2.0 authorization-code and customer-consent flows required for third-party applications to gain scoped access to a…
+- [Citi Customers API](https://apis.io/apis/citigroup/citi-customers-api/) — The Citi Customers API provides authorized access to retail customer profile information, including contact details and demographic data, for use in…
+- [Citi Onboarding API](https://apis.io/apis/citigroup/citi-onboarding-api/) — The Citi Onboarding API enables digital account opening, document submission, and KYC-driven origination workflows for onboarding new retail customers onto…
+- [Citi Pay with Points API](https://apis.io/apis/citigroup/citi-pay-with-points-api/) — The Citi Pay with Points API enables Citi cardholders to redeem ThankYou points and other rewards balances for purchases at merchant checkouts and inside…
+- [Citi Utilities API](https://apis.io/apis/citigroup/citi-utilities-api/) — The Citi Utilities API provides supporting reference data such as foreign-exchange rates, branch and ATM locators, and cut-off times used to support…
+- [CitiConnect API](https://apis.io/apis/citigroup/citiconnect-api/) — CitiConnect is the corporate treasury and trade integration channel within Citi's Treasury and Trade Solutions (TTS) business, exposing APIs for real-time…
+- [CitiConnect WorldLink Payment Services API](https://apis.io/apis/citigroup/citiconnect-worldlink-api/) — The CitiConnect WorldLink Payment Services API delivers cross-border, multi-currency payment capabilities within the CitiConnect suite, including FX rate…
+- [CitiConnect FX (Real-Time FX) API](https://apis.io/apis/citigroup/citiconnect-fx-api/) — The CitiConnect FX API provides real-time foreign-exchange information and execution for corporate treasury clients, supporting FX rate requests and the…
+- [CitiConnect Statements and Reporting API](https://apis.io/apis/citigroup/citiconnect-statements-reporting-api/) — The CitiConnect Statements and Reporting API delivers self-service reports, account statements, intraday and prior-day balance and transaction reporting,…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-23
-- **Modified:** 2026-07-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### JSON-LD (1)
 
-### Retail — Citi Developer Hub (partner.citi.com)
+Linked-data contexts for the provider's vocabulary.
 
-- **Citi Accounts and Transactions API** — authorized access to retail accounts, balances, and transaction histories. Tags: Accounts, Balances, Banking, Statements, Transactions.
-- **Citi Money Movement API** — payment initiation (ACH, wire, book transfer) from Citi accounts. Tags: ACH, Money Movement, Payment Initiation, Payments, Wire Transfer.
-- **Citi Authorize API** — OAuth 2.0 authorization-code and consent flows for third-party access. Tags: Authorization, Consent, OAuth, SCA.
-- **Citi Customers API** — authorized customer profile access for onboarding and KYC. Tags: Customers, Identity, KYC, Profiles.
-- **Citi Onboarding API** — digital account opening, document submission, and KYC origination. Tags: Account Opening, Customer Onboarding, KYC, Origination.
-- **Citi Pay with Points API** — ThankYou points and rewards redemption at checkouts and partner apps. Tags: Loyalty, Pay with Points, Rewards.
-- **Citi Utilities API** — FX rates, branch/ATM locators, and reference data. Tags: FX Rates, Locator, Reference Data, Utilities.
+- [Citigroup Context](https://apis.io/jsonld/citigroup/citigroup-context/)
 
-### Corporate — CitiConnect (Treasury and Trade Solutions)
+#### Governance rules (1)
 
-- **CitiConnect API** — real-time payments, request-to-pay, direct debits, faster payments, and account-balance inquiry for enterprise ERP/TMS integration. 1B+ calls since 2017. Tags: CitiConnect, Corporate Banking, ERP Integration, TTS, Real-Time Payments.
-- **CitiConnect WorldLink Payment Services API** — cross-border, multi-currency payments with FX enquiry and deal booking, 24x7. Tags: WorldLink, Cross-Border Payments, FX, CitiConnect, TTS.
-- **CitiConnect FX (Real-Time FX) API** — real-time FX rate requests and contract booking from ERP/TMS. Tags: FX, Foreign Exchange, CitiConnect, TTS.
-- **CitiConnect Statements and Reporting API** — statements, reporting, cut-off times, and proof of payment. Tags: Statements, Reporting, Proof of Payment, CitiConnect, TTS.
+Spectral rulesets for the provider's contracts.
 
-## Auth & Open-Finance Posture
+- [Citigroup API Rules](https://apis.io/rules/citigroup/citigroup-rules/)
 
-- **Retail:** OAuth 2.0 authorization-code / customer-consent flows, sandbox-brokered.
-- **Corporate (CitiConnect):** OAuth 2.0 with mutual TLS (mTLS).
-- **Open finance:** US voluntary regime. Citi is a **co-owner of Akoya**, the FDX-aligned consumer-permissioned data-access network, its primary channel under CFPB Section 1033 norms.
-- **Specs:** No public downloadable OpenAPI, Swagger, Postman, or SDK — documentation is HTML and partner-gated.
+#### Security (2)
 
-## Common Properties
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Citigroup Authentication](https://apis.io/security/citigroup/citigroup-authentication/)
+- [Citigroup Domain Security](https://apis.io/security/citigroup/citigroup-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Citigroup Plans Pricing](https://apis.io/plans/citigroup/citigroup-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Citigroup Rate Limits](https://apis.io/rate-limits/citigroup/citigroup-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Citigroup Finops](https://apis.io/finops/citigroup/citigroup-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.citigroup.com)
-- [Developer Portal](https://developer.citi.com/)
-- [Partner Portal](https://partner.citi.com/)
 - [Documentation](https://partner.citi.com/developers)
-- [API Catalog](https://sandbox.developerhub.citi.com/api-catalog-list)
-- [CitiConnect](https://www.citigroup.com/global/insights/citiconnect-api-portal)
-- [GitHub Organization](https://github.com/citi)
-- [LinkedIn](https://www.linkedin.com/company/citigroup)
-- [Blog / News](https://www.citigroup.com/global/news)
-- [Investor Relations](https://www.citigroup.com/global/investors)
-- [Terms of Service](https://online.citi.com/US/JRS/pands/detail.do?ID=Terms)
-- [Privacy Policy](https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms)
 - [Support](https://online.citi.com/US/contactus.htm)
+- [Blog](https://www.citigroup.com/global/news)
+- [Terms of service](https://online.citi.com/US/JRS/pands/detail.do?ID=Terms)
+- [Privacy policy](https://online.citi.com/US/JRS/pands/detail.do?ID=PrivacyTerms)
+- [GitHub](https://github.com/citi)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 23.5** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 80.4 |
+| Contract quality | 10.7 |
+| Contract governance | 29.5 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 5.3 |
+
+**Agent readiness 6.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 23.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/citigroup/](https://apis.io/providers/citigroup/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Citigroup: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/citigroup/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
