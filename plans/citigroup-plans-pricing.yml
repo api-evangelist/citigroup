@@ -1,0 +1,100 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Citigroup
+providerId: citigroup
+created: '2026-05-04'
+# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
+# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
+method: generated
+modified: '2026-05-05'
+reconciled: false
+tags:
+  - Banking
+  - Financial Services
+  - Payments
+  - Treasury
+  - Open Banking
+description: Citi exposes its corporate, consumer, and treasury APIs through the Citi Developer Hub
+  (developer.citi.com) and the CitiConnect / Citi Velocity platforms. Access is gated to vetted
+  institutional and corporate clients under master service agreements; per-API pricing is not publicly
+  published and is negotiated through Citi's relationship managers along with cash-management,
+  custody, and FX service agreements.
+notes: No public per-API price list. Citi developer access is partner-only; commercial terms flow
+  through bank relationship and master service agreements rather than self-serve pricing.
+sources:
+  - https://developer.citi.com
+  - https://www.citibank.com/tts/sa/citiconnect/index.jsp
+  - https://www.citivelocity.com
+plans:
+  - id: citigroup-developer-sandbox
+    name: Citi Developer Hub Sandbox
+    type: freemium
+    description: Free sandbox access to Citi APIs (Authorization, Account Information, Payments,
+      Onboarding, Reference Data) for vetted developers and partners. Production access requires a
+      commercial agreement.
+    entries:
+      - label: Sandbox access
+        name: sandbox
+        type: subscription
+        metric: month
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Sandbox API access
+      - name: Documentation and reference data
+      - name: OAuth 2.0 authentication flows
+  - id: citigroup-corporate-production
+    name: CitiConnect / Citi Developer Hub Production
+    type: enterprise
+    description: Production access for corporate, institutional, and FinTech partners. Pricing flows
+      through Citi cash-management, payments, custody, and FX agreements.
+    entries:
+      - label: Negotiated commercial terms
+        name: enterprise
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact Citi relationship manager
+        userMultiplied: false
+    elements:
+      - name: Payments / Receivables APIs
+      - name: Account Statements
+      - name: FX / Citi Velocity APIs
+      - name: Trade & supply-chain finance APIs
+      - name: Production security review and onboarding
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  - period
+  plans:
+  - name: Citi Developer Hub Sandbox
+    access: freemium
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: CitiConnect / Citi Developer Hub Production
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
